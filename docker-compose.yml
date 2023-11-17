@@ -1,0 +1,13 @@
+version: '3'
+services:
+  bot:
+    container_name: bot
+    env_file:
+      - .env
+    build:
+      context: .
+      dockerfile: Dockerfile
+
+networks:
+  bot_network:
+    name: bot_network
